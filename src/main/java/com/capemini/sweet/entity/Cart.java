@@ -20,7 +20,7 @@ import lombok.NoArgsConstructor;
 
 public class Cart {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long cartId;
     private String userid;
     private String sweetid;

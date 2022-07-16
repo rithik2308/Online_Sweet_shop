@@ -20,7 +20,7 @@ import lombok.NoArgsConstructor;
 
 public class Sweet {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long sweetId;
     private String sweetname;
     private double sweetprice;
