@@ -29,5 +29,11 @@ public class CartService {
     public void Addcart(Cart cart) {
         cartRepository.save(cart);
     }
+    public String UpdateCart(long id, Cart cart) {
+        
+        cart.setCartId(id);
+        cartRepository.save(cart);
+        return "Cart updated successfully";
+    }
     
 }

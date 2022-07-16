@@ -25,5 +25,11 @@ public class SweetService {
         sweetRepository.deleteById(id);
         return "Sweet deleted successfully";
     }
+    public String UpdateSweet(long id, Sweet sweet) {
+        
+        sweet.setSweetId(id);
+        sweetRepository.save(sweet);
+        return "Sweet updated successfully";
+    }
     
 }

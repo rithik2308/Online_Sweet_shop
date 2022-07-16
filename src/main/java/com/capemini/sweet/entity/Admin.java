@@ -20,7 +20,7 @@ import lombok.NoArgsConstructor;
 
 public class Admin {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private long AdminId;
     private String username;
     private String password;

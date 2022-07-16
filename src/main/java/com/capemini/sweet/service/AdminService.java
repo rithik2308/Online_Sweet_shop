@@ -29,4 +29,10 @@ public class AdminService {
         adminRepository.deleteById(id);
         return "admin deleted successfully";
     }
+    public String UpdateAdmin(long id, Admin admin) {
+        
+        admin.setAdminId(id);
+        adminRepository.save(admin);
+        return "admin updated successfully";
+    }
 }
