@@ -1,5 +1,6 @@
 package com.capemini.sweet.entity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -20,9 +21,12 @@ import lombok.NoArgsConstructor;
 
 public class Admin {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @Column(name="AdminId")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long AdminId;
+    @Column(name="Username")
     private String username;
+    @Column(name="password")
     private String password;
     
 }

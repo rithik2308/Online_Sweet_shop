@@ -1,5 +1,6 @@
 package com.capemini.sweet.entity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -20,11 +21,16 @@ import lombok.NoArgsConstructor;
 
 public class Cart {
     @Id
+    @Column(name="CartId")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long cartId;
+    @Column(name="UserId")
     private String userid;
+    @Column(name="SweetId")
     private String sweetid;
+    @Column(name="SweetName")
     private String sweetname;
+    @Column(name="Price")
     private int price;
     
 }

@@ -1,5 +1,6 @@
 package com.capemini.sweet.entity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -19,10 +20,15 @@ import lombok.NoArgsConstructor;
 @Builder
 public class User {
     @Id
+    @Column(name="UserId")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long userId;
+    @Column(name="FirstName")
     private String firstname;
+    @Column(name="LastName")
     private String lastname;
+    @Column(name="Address")
     private String address;
+    @Column(name="PhoneNumber")
     private String phonenumber;
 }

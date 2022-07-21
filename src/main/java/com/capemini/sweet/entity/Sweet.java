@@ -1,5 +1,6 @@
 package com.capemini.sweet.entity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -20,9 +21,13 @@ import lombok.NoArgsConstructor;
 
 public class Sweet {
     @Id
+    @Column(name="SweetId")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long sweetId;
+    @Column(name="SweetName")
     private String sweetname;
+    @Column(name="SweetPrice")
     private double sweetprice;
+    @Column(name="SweetStock")
     private int sweetstock;
 }
